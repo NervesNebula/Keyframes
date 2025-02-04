@@ -13,18 +13,17 @@ body{
 }
 
 #box{
-    width: 70px;
+    width: 100px;
     height: 120px;
     font-size: 16px;
     color:black;
     border: 2px solid black;
-
 }
 
 .bounce{
     animation-duration: 1s;
     animation-name: hank;
-    animation-duration: ease-in-out;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
@@ -35,3 +34,70 @@ body{
 
     50% {transform: translateY(-20px);}
 }
+
+.rotate{
+    animation-name: rot;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rot{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {transform: rotate(360deg);}
+}
+
+.fade{
+    animation-name: fadd;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadd{
+    0%, 100% {
+       opacity:0;
+    }
+
+    100% {opacity:1;}
+}
+
+.scale{
+    animation-name: scal;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scal{
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {transform: scale(3);
+    }
+}
+
+.slidein{
+    animation-name: slideinn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideinn{
+    0% {
+        transform: trasnlatex(-100);
+        opacity: 0;
+    }
+
+    100% {
+        transform: trasnlatex(0);
+        opacity: 1;
+    }
+}
+
+
